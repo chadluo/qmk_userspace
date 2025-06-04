@@ -16,9 +16,9 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
-        oled_write_ln_P(PSTR("2025-06-01 Mac"), false);
-        oled_write_ln_P(PSTR("qmk_userspace"), false);
-        oled_write_ln_P(PSTR("devcontainer"), false);
+        oled_write_ln_P(PSTR("2025-06-04 Mac"), false);
+        oled_write_ln_P(PSTR("mute"), false);
+        oled_write_ln_P(PSTR(""), false);
     }
     return false;
 }
