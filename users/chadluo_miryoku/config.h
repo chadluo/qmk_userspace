@@ -22,6 +22,9 @@
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
 
+// Caps word
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 // Mouse key speed and acceleration.
 #undef MOUSEKEY_DELAY
 #define MOUSEKEY_DELAY          0

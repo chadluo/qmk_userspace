@@ -16,9 +16,9 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
-        oled_write_ln_P(PSTR("2025-06-04 Mac"), false);
-        oled_write_ln_P(PSTR("mute"), false);
-        oled_write_ln_P(PSTR(""), false);
+        oled_write_ln_P(PSTR("2025-08-31 Mac"), false);
+        oled_write_ln_P(PSTR("space cadet shift"), false);
+        oled_write_ln_P(PSTR("auto shift L+R"), false);
     }
     return false;
 }
