@@ -16,9 +16,9 @@ bool oled_task_user(void) {
     if (is_keyboard_master()) {
         // oled_write_P(PSTR(get_highest_layer(layer_state)), false);
     } else {
-        oled_write_ln_P(PSTR("2025-08-31 Mac"), false);
-        oled_write_ln_P(PSTR("space cadet shift"), false);
-        oled_write_ln_P(PSTR("auto shift L+R"), false);
+        oled_write_ln_P(PSTR("2025-09-01 Mac"), false);
+        oled_write_ln_P(PSTR("right encoder"), false);
+        oled_write_ln_P(PSTR("mouse wheel"), false);
     }
     return false;
 }
@@ -40,8 +40,11 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         tap_code(clockwise ? KC_VOLU : KC_VOLD);
     } else if (index == 1) {
-        // register_code16(G(C(clockwise ? KC_RGHT : KC_LEFT)));
-        // unregister_code16(G(C(clockwise ? KC_RGHT : KC_LEFT)));
+        if (get_mods() & MOD_MASK_SHIFT) {
+            tap_code(clockwise ? MS_WHLL : MS_WHLR);
+        } else {
+            tap_code(clockwise ? MS_WHLU : MS_WHLD);
+        }
     }
     return false;
 }
